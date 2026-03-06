@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 
 * {
-  font-family: "Geist", sans-serif;
+  font-family: "Geist", sans-serif!important;
+}
+
+.error-text {
+  color: rgba(255, 0, 0, 0.877);
+  font-size: 1.025rem;
 }

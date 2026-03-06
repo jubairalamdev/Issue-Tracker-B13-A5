@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Tracker</title>
+
+    <!-- Favicon Setup -->
+    <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
+
+    <!-- TailWind and DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Other CSS + Font -->
+    <link rel="stylesheet" href="Styles/login.css">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+</head>
+
+<body class="bg-base-200 min-h-screen">
+
+    <header class="bg-base-100 border-b-[0.5px] border-neutral-300 bg-base-100 absolute top-0 w-full">
+        <div class="navbar w-11/12 mx-auto h-[78px] max-w-[1440px]">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-2xl">
+                    <img src="./assets/github-logo.png" alt="" class="w-9">
+                    GitHub Issues Tracker
+                </a>
+            </div>
+            <div class="flex gap-2">
+                <div class="w-fit h-fit border-[0.5px] border-neutral-300 rounded-md pl-3 pr-1 flex flex-row items-center">
+                    <img src="./assets/search.png" alt="" class="w-4 h-4">
+                    <input type="text" placeholder="Search" class="input border-none w-24 md:w-auto" />
+                </div>
+                <div class="dropdown dropdown-end">
+                    <ul tabindex="-1"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+                <button class="btn btn-primary shadow-none -ml-3 border-2 border-primary" id="search-issue-btn">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-[1100px] mx-auto mt-[75px] py-12 space-y-4">
+        <section class="bg-base-100 p-6 rounded-xl">
+            <button class="btn btn-primary min-w-28 shadow-none">
+                All
+            </button>
+            <button class="btn btn-outline-soft min-w-28 text-neutral-600 shadow-none">
+                Open
+            </button>
+            <button class="btn btn-outline-soft min-w-28 text-neutral-600 shadow-none">
+                Closed
+            </button>
+        </section>
+        <section class="bg-base-100 p-6 rounded-xl flex justify-between">
+            <div class="flex items-center gap-4">
+                <div class="bg-primary/20 p-2 rounded-full">
+                    <img src="./assets/Aperture.png" alt="Aperture" srcset="">
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">50 Issues</h3>
+                    <p class="text-neutral-500">Track and manage your project issues</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-1">
+                <div class="p-2 w-fit h-fit rounded-full bg-success"></div>
+                <p class="text-neutral-600 font-semibold">Open</p>
+                <div class="p-2 w-fit h-fit rounded-full bg-secondary ml-4"></div>
+                <p class="text-neutral-600 font-semibold">Closed</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

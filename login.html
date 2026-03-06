@@ -1,22 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Issue Tracker</title>
+    <title>Issue Tracker - Login</title>
+
+    <!-- Favicon Setup -->
+    <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
 
     <!-- TailWind and DaisyUI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    
+
     <!-- Other CSS + Font -->
     <link rel="stylesheet" href="Styles/login.css">
 
     <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    
 
+<body onload="domLoad()">
+    <main class="w-full py-20 flex justify-center bg-base-200 min-h-screen">
+        <section class="p-8 mx-3 rounded-lg bg-base-100 min-w-[520px] shadow-lg shadow-gray-200 h-fit space-y-6">
+            <div class="flex flex-col items-center">
+                <img src="./assets/github-logo.png" alt="Github Issue Tracker" class="mb-6">
+                <h2 class="mb-1 text-2xl font-semibold text-neutral">GitHub Issues Tracker</h2>
+                <p class="text-neutral-500">Sign in to manage your issues</p>
+            </div>
+            <div>
+                <fieldset class="fieldset" id="login-container">
+                    <legend class="fieldset-legend text-[16px] text-neutral">Username</legend>
+                    <input type="text" class="text-[16px] input w-full" placeholder="Enter Username" id="usernameInput"/>
+                    <p class="label text-primary text-sm font-medium">Default: admin</p>
+                    <legend class="fieldset-legend text-[16px] text-neutral">Password</legend>
+                    <input type="password" class="text-[16px] input w-full" placeholder="Enter Password" id="passwordInput"/>
+                    <p class="label text-primary text-sm font-medium">Default: admin123</p>
+                    <p class="error-text" id="error-text">The Credentials Don't Match, Please Try again.</p>
+                </fieldset>
+                <button class="btn btn-primary w-full mt-6 shadow-none" id="loginBtn" onclick="login()">Sign In</button>
+            </div>
+            <div class="relative flex items-center">
+                <div class="flex-grow border-t border-gray-300"></div>
+                <span class="flex-shrink mx-4 text-gray-800">OR</span>
+                <div class="flex-grow border-t border-gray-300"></div>
+            </div>
+            <div class="flex flex-col items-center space-y-3">
+                <p class="text-neutral-500">Demo Credentials:</p>
+                <div class="py-6 bg-base-200 w-full flex flex-col items-center rounded-lg">
+                    <p class="text-[16px] font-semibold text-neutral">Username: <span class="font-normal">admin</span></p>
+                    <p class="text-[16px] font-semibold text-neutral">Password: <span class="font-normal">admin123</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login JS -->
+    <script src="./Scripts/login.js"></script>
 </body>
+
 </html>
