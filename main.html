@@ -78,7 +78,7 @@
                     <img src="./assets/Aperture.png" alt="Aperture" srcset="">
                 </div>
                 <div>
-                    <h3 class="text-xl font-semibold">50 Issues</h3>
+                    <h3 class="text-xl font-semibold"><span id="IssuesFound">0</span> Issues</h3>
                     <p class="text-neutral-500">Track and manage your project issues</p>
                 </div>
             </div>
@@ -89,7 +89,7 @@
                 <p class="text-neutral-600 font-semibold">Closed</p>
             </div>
         </section>
-        <section class="p-6 bg-base-200 shadow-md shadow-neutral-200 rounded-b-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <section class="p-6 bg-base-200 shadow-md shadow-neutral-200 rounded-b-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="issuesContainer">
 
 
             <!-- Issue Card -->
@@ -124,7 +124,7 @@
                 <div class="p-4 space-y-3">
                     <div class="flex justify-between items-center">
                         <img src="./assets/Closed- Status .png" alt="open" class="w-6 h-6">
-                        <div class="badge bg-neutral-content rounded-full text-sm w-20 text-neutral-700 font-medium">LOW</div>
+                        <div class="badge bg-neutral-content text-neutral-700 font-medium">LOW</div>
                     </div>
                     <h3 class="font-semibold text-neutral-800">Fix navigation menu on mobile devices</h3>
                     <p class="text-neutral-500 text-sm">The navigation menu doesn't collapse properly on mobile devices...</p>
@@ -150,7 +150,7 @@
                 <div class="p-4 space-y-3">
                     <div class="flex justify-between items-center">
                         <img src="./assets/Open-Status.png" alt="open" class="w-6 h-6">
-                        <div class="badge bg-warning/20 rounded-full text-sm w-20 text-warning font-medium">MEDIUM</div>
+                        <div class="badge  text-warning font-medium">MEDIUM</div>
                     </div>
                     <h3 class="font-semibold text-neutral-800">Fix navigation menu on mobile devices</h3>
                     <p class="text-neutral-500 text-sm">The navigation menu doesn't collapse properly on mobile devices...</p>
@@ -176,6 +176,9 @@
 
         </section>
     </main>
+
+
+    <script src="./Scripts/main.js"></script>
 </body>
 
 </html>
