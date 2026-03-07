@@ -27,7 +27,7 @@
 <body class="bg-base-200 min-h-screen">
 
     <header class="bg-base-100 border-b-[0.5px] border-neutral-300 bg-base-100 absolute top-0 w-full">
-        <div class="navbar w-11/12 mx-auto h-[78px] max-w-[1440px]">
+        <div class="navbar w-11/12 mx-auto min-h-[78px] max-w-[1440px] flex-col md:flex-row">
             <div class="flex-1">
                 <a class="btn btn-ghost text-2xl">
                     <img src="./assets/github-logo.png" alt="" class="w-9">
@@ -72,7 +72,7 @@
             </button>
         </section>
         <section
-            class="bg-base-100 p-6 rounded-t-xl flex border-b-[0.5px] border-neutral-200 justify-between shadow-md shadow-neutral-200 mt-4">
+            class="bg-base-100 p-6 rounded-t-xl flex border-b-[0.5px] border-neutral-200 justify-between shadow-md shadow-neutral-200 mt-4 flex-col space-y-4 items-center md:flex-row">
             <div class="flex items-center gap-4">
                 <div class="bg-primary/20 p-2 rounded-full">
                     <img src="./assets/Aperture.png" alt="Aperture" srcset="">
@@ -89,7 +89,7 @@
                 <p class="text-neutral-600 font-semibold">Closed</p>
             </div>
         </section>
-        <section class="p-6 bg-base-200 shadow-md shadow-neutral-200 rounded-b-xl grid grid-cols-4 gap-4">
+        <section class="p-6 bg-base-200 shadow-md shadow-neutral-200 rounded-b-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
 
 
             <!-- Issue Card -->
@@ -145,8 +145,6 @@
                     <p class="text-neutral-500">1/15/2024</p>
                 </div>
             </div>
-
-            
 
             <div class="bg-base-100 rounded-xl border-t-4 border-success shadow-md shadow-neutral-200">
                 <div class="p-4 space-y-3">
