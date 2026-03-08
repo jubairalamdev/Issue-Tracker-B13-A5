@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- Other CSS + Font -->
-    <link rel="stylesheet" href="Styles/login.css">
+    <link rel="stylesheet" href="Styles/main.css">
 
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -24,10 +24,10 @@
 
 </head>
 
-<body class="bg-base-200 min-h-screen">
+<body class="bg-base-200 min-h-screen" onload="switchTabs('All')">
 
     <header class="bg-base-100 border-b-[0.5px] border-neutral-300 bg-base-100 absolute top-0 w-full">
-        <div class="navbar w-11/12 mx-auto min-h-[78px] max-w-[1440px] flex-col md:flex-row">
+        <div class="navbar w-11/12 mx-auto min-h-[78px] flex-col md:flex-row">
             <div class="flex-1">
                 <a class="btn btn-ghost text-2xl">
                     <img src="./assets/github-logo.png" alt="" class="w-9">
@@ -59,15 +59,15 @@
         </div>
     </header>
 
-    <main class="max-w-[1100px] mx-auto mt-[75px] py-12">
+    <main class="max-w-[1200px] mx-auto mt-[75px] py-12">
         <section class="bg-base-100 p-6 rounded-xl shadow-md shadow-neutral-200">
-            <button class="btn btn-primary min-w-28 shadow-none">
+            <button class="btn btn-outline-soft min-w-28 text-neutral-600 shadow-none tabsBtn" id="allSwitchBtn" onclick="switchTabs('All')">
                 All
             </button>
-            <button class="btn btn-outline-soft min-w-28 text-neutral-600 shadow-none">
+            <button class="btn btn-outline-soft min-w-28 text-neutral-600 shadow-none tabsBtn" id="openSwitchBtn" onclick="switchTabs('Open')">
                 Open
             </button>
-            <button class="btn btn-outline-soft min-w-28 text-neutral-600 shadow-none">
+            <button class="btn btn-outline-soft min-w-28 text-neutral-600 shadow-none tabsBtn"  id="closeSwitchBtn" onclick="switchTabs('Closed')">
                 Closed
             </button>
         </section>
@@ -85,7 +85,7 @@
             <div class="flex items-center gap-1">
                 <div class="p-2 w-fit h-fit rounded-full bg-success"></div>
                 <p class="text-neutral-600 font-semibold">Open</p>
-                <div class="p-2 w-fit h-fit rounded-full bg-secondary ml-4"></div>
+                <div class="p-2 w-fit h-fit rounded-full bg-purple ml-4"></div>
                 <p class="text-neutral-600 font-semibold">Closed</p>
             </div>
         </section>
@@ -94,86 +94,11 @@
 
             <!-- Issue Card -->
 
-            <div class="bg-base-100 rounded-xl border-t-4 border-success shadow-md shadow-neutral-200">
-                <div class="p-4 space-y-3">
-                    <div class="flex justify-between items-center">
-                        <img src="./assets/Open-Status.png" alt="open" class="w-6 h-6">
-                        <div class="badge bg-error/20 rounded-full text-sm w-20 text-error font-medium">HIGH</div>
-                    </div>
-                    <h3 class="font-semibold text-neutral-800">Fix navigation menu on mobile devices</h3>
-                    <p class="text-neutral-500 text-sm">The navigation menu doesn't collapse properly on mobile devices...</p>
-                    <div>
-                        <div class="badge bg-error/20 border-error border-[0.5px] text-sm text-error font-medium rounded-full">
-                            <img src="./assets/bug.png" alt="">
-                            BUG
-                        </div>
-                        <div class="badge bg-warning/20 border-warning border-[0.5px] text-sm text-warning font-medium rounded-full">
-                            <img src="./assets/help.png" alt="">
-                            HELP WANTED
-                        </div>
-                    </div>
-                </div>
-                <hr class="text-neutral-200">
-                <div class="p-4 space-y-2">
-                    <p class="text-neutral-500">#1by john_doe</p>
-                    <p class="text-neutral-500">1/15/2024</p>
-                </div>
-            </div>
 
-            <div class="bg-base-100 rounded-xl border-t-4 border-success shadow-md shadow-neutral-200">
-                <div class="p-4 space-y-3">
-                    <div class="flex justify-between items-center">
-                        <img src="./assets/Closed- Status .png" alt="open" class="w-6 h-6">
-                        <div class="badge bg-neutral-content text-neutral-700 font-medium">LOW</div>
-                    </div>
-                    <h3 class="font-semibold text-neutral-800">Fix navigation menu on mobile devices</h3>
-                    <p class="text-neutral-500 text-sm">The navigation menu doesn't collapse properly on mobile devices...</p>
-                    <div>
-                        <div class="badge bg-error/20 border-error border-[0.5px] text-sm text-error font-medium rounded-full">
-                            <img src="./assets/bug.png" alt="">
-                            BUG
-                        </div>
-                        <div class="badge bg-warning/20 border-warning border-[0.5px] text-sm text-warning font-medium rounded-full">
-                            <img src="./assets/help.png" alt="">
-                            HELP WANTED
-                        </div>
-                    </div>
-                </div>
-                <hr class="text-neutral-200">
-                <div class="p-4 space-y-2">
-                    <p class="text-neutral-500">#1by john_doe</p>
-                    <p class="text-neutral-500">1/15/2024</p>
-                </div>
-            </div>
-
-            <div class="bg-base-100 rounded-xl border-t-4 border-success shadow-md shadow-neutral-200">
-                <div class="p-4 space-y-3">
-                    <div class="flex justify-between items-center">
-                        <img src="./assets/Open-Status.png" alt="open" class="w-6 h-6">
-                        <div class="badge  text-warning font-medium">MEDIUM</div>
-                    </div>
-                    <h3 class="font-semibold text-neutral-800">Fix navigation menu on mobile devices</h3>
-                    <p class="text-neutral-500 text-sm">The navigation menu doesn't collapse properly on mobile devices...</p>
-                    <div>
-                        <div class="badge bg-error/20 border-error border-[0.5px] text-sm text-error font-medium rounded-full">
-                            <img src="./assets/bug.png" alt="">
-                            BUG
-                        </div>
-                        <div class="badge bg-warning/20 border-warning border-[0.5px] text-sm text-warning font-medium rounded-full">
-                            <img src="./assets/help.png" alt="">
-                            HELP WANTED
-                        </div>
-                    </div>
-                </div>
-                <hr class="text-neutral-200">
-                <div class="p-4 space-y-2">
-                    <p class="text-neutral-500">#1by john_doe</p>
-                    <p class="text-neutral-500">1/15/2024</p>
-                </div>
-            </div>
-
-            
-
+        </section>
+        <!-- Loading Screen -->
+        <section class="p-6 bg-base-200 shadow-md shadow-neutral-200 rounded-b-xl justify-center hidden" id="loadingContainer">
+            <span class="loading loading-spinner loading-xl text-neutral-700"></span>
         </section>
     </main>
 

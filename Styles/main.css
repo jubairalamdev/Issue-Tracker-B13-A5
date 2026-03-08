@@ -1,0 +1,11 @@
+.border-purple {
+    border-color: #A855F7;
+}
+
+.bg-purple {
+    background-color: #A855F7;
+}
+
+input:focus {
+    outline: none;
+}
