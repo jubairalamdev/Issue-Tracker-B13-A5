@@ -26,7 +26,6 @@ const switchTabs = async (tab) => {
     const allSwitchBtn = document.getElementById("allSwitchBtn");
     const openSwitchBtn = document.getElementById("openSwitchBtn");
     const closeSwitchBtn = document.getElementById("closeSwitchBtn");
-    // console.log(tabsBtn)
     if (tab === "All") {
         deactivateAllTabs();
         loading(true);
@@ -95,8 +94,7 @@ const loadAllData = (issues) => {
                 </div>
             </div>
         `;
-
-        // labels adding
+        // Adding Labels
         let issueLabels = document.getElementById(`issueLabels-${issue.id}`);
         issueLabels.innerHTML = "";
         issue.labels.forEach(label => {
@@ -106,8 +104,7 @@ const loadAllData = (issues) => {
                         <img src="./assets/bug.png" alt="">
                         BUG
                     </div>
-                `
-                // console.log(issueLabels.innerHTML) 
+                `;
             }
             else if (label == "help wanted") {
                 issueLabels.innerHTML += `
@@ -115,7 +112,7 @@ const loadAllData = (issues) => {
                         <img src="./assets/help.png" alt="">
                         HELP WANTED
                     </div>
-                `
+                `;
             }
             else {
                 issueLabels.innerHTML += `
@@ -123,7 +120,7 @@ const loadAllData = (issues) => {
                         <img src="./assets/enhancement.png" alt="">
                         ${label}
                     </div>
-                `
+                `;
             }
         })
     });
@@ -132,8 +129,8 @@ const loadAllData = (issues) => {
 const loadSearchResults = async () => {
     const searchInput = document.getElementById("searchInput");
     const query = searchInput.value.trim().toLowerCase();
-    deactivateAllTabs()
-    loading(true)
+    deactivateAllTabs();
+    loading(true);
     const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${query}`);
     const data = await res.json();
     countIssues(data.data);
@@ -193,8 +190,7 @@ const showIssueDetails = (issueData) => {
                         <img src="./assets/bug.png" alt="">
                         BUG
                     </div>
-                `
-                // console.log(issueLabels.innerHTML) 
+                `;
             }
             else if (label == "help wanted") {
                 modalLabelContainer.innerHTML += `
@@ -202,7 +198,7 @@ const showIssueDetails = (issueData) => {
                         <img src="./assets/help.png" alt="">
                         HELP WANTED
                     </div>
-                `
+                `;
             }
             else {
                 modalLabelContainer.innerHTML += `
@@ -210,7 +206,7 @@ const showIssueDetails = (issueData) => {
                         <img src="./assets/enhancement.png" alt="">
                         ${label}
                     </div>
-                `
+                `;
             }
         })
     my_modal_5.showModal();

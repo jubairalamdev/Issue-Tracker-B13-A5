@@ -22,10 +22,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-</head>
-
 <body class="bg-base-200 min-h-screen" onload="switchTabs('All')">
-
     <header class="bg-base-100 border-b-[0.5px] border-neutral-300 bg-base-100 fixed z-30 top-0 w-full">
         <div class="navbar w-11/12 mx-auto min-h-[78px] flex-col md:flex-row">
             <div class="flex-1">
@@ -58,7 +55,7 @@
             </div>
         </div>
     </header>
-
+    <!-- All Body Contents -->
     <main class="max-w-[1200px] mx-auto mt-[75px] py-12">
         <section class="bg-base-100 p-6 rounded-xl shadow-md shadow-neutral-200">
             <button class="btn btn-outline-soft min-w-28 text-neutral-600 shadow-none tabsBtn" id="allSwitchBtn" onclick="switchTabs('All')">
@@ -90,24 +87,18 @@
             </div>
         </section>
         <section class="p-6 bg-base-200 shadow-md shadow-neutral-200 rounded-b-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="issuesContainer">
-
-
-            <!-- Issue Card -->
-
-
+            <!-- Issue Cards Appear Here -->
         </section>
-
         <!-- Loading Screen -->
         <section class="p-6 bg-base-200 shadow-md shadow-neutral-200 rounded-b-xl justify-center hidden" id="loadingContainer">
             <span class="loading loading-spinner loading-xl text-neutral-700"></span>
         </section>
     </main>
-    
+    <!-- Modal Container -->
     <section id="modalContainer">
         
     </section>
-
+    <!-- Main JS -->
     <script src="./Scripts/main.js"></script>
-    
 </body>
 </html>

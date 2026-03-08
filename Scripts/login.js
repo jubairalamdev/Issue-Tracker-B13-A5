@@ -1,4 +1,3 @@
-// console.log("YEP IM WORKING RN")
 const domLoad = () => {
     const errorText = document.getElementById("error-text");
     errorText.classList.add("hidden");
