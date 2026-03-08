@@ -1,0 +1,49 @@
+~~~~~~~~~~~~~~~~~ Ans. To The Que. No. 1 ~~~~~~~~~~~~~~~~~~~~~
+
+The Main Difference between Var, Let and Const is given below:
+
+-> Var: Var is a Variable which is Function-Scoped. It can be Re-assigned and Re-declared.
+-> Let: Let is a Variable which is Block-Scoped. It can be Re-assigned but can't be Declared again.
+-> Const: Const is a Variable which is Block-Scoped. It cannot be Re-Assigned or Re-Declared.
+
+~~~~~~~~~~~~~~~~~ Ans. To The Que. No. 2 ~~~~~~~~~~~~~~~~~~~~~
+
+Spread Operator is used to concat one or more than an array/object into a new array/object. It combines the inner value of all arrays given and returns the combined array. It is used by 3 Dots ...
+
+*Examples: 
+const arr1 = [3,5,7];
+const arr2 = [1,2,4,6];
+const spread = [...arr1, ...arr2];
+console.log(spread);
+
+Output:
+> [1,2,3,4,5,6,7]
+
+~~~~~~~~~~~~~~~~~ Ans. To The Que. No. 3 ~~~~~~~~~~~~~~~~~~~~~
+
+The Differences between .map, .forEach and .filter methods are given below:
+
+-> forEach(): this method executes a function for each element on the given array/object. It does not return anything. it is used for any side works.
+-> map(): this method executes a function on each element and returns a new array with the modifications made.
+-> filter(): Checks each element against a condition and returns a new array with the values that  fulfils the condition.
+
+~~~~~~~~~~~~~~~~~ Ans. To The Que. No. 4 ~~~~~~~~~~~~~~~~~~~~~
+
+Arrow Function is a new way of writing functions which is included in the ES6 version of Javascript. Arrow function is basically a function written in a shortcut structure.
+
+Normal Function: function sum(a,b){return a+b}
+Arrow Function: const sum = (a,b) => a+b
+
+Note: After the Arrow (=>), if it's a 1 line function then it returns a+b automatically... But if the function's bigger then the format should be this:
+
+const sum = (a,b) => {
+    const result = a+b;
+    return result;
+}
+
+~~~~~~~~~~~~~~~~~ Ans. To The Que. No. 5 ~~~~~~~~~~~~~~~~~~~~~
+
+Template literals are used to create strings using backticks (`) instead of quotes. Its makes the task much easier to handle dynamic data and multi-line strings. Benefits of Using these Backticks:
+
+-> Dynamic Data Pass: Using ${variable} directly inside the string helps us to put Dynamic Value and Data to any kinds of strings.
+-> Multi-line: It uses line breaks in the front end just as we use line breaks when writing in the code editor, which makes it much easier for writing multi-line strings.
