@@ -26,7 +26,7 @@
 
 <body class="bg-base-200 min-h-screen" onload="switchTabs('All')">
 
-    <header class="bg-base-100 border-b-[0.5px] border-neutral-300 bg-base-100 absolute top-0 w-full">
+    <header class="bg-base-100 border-b-[0.5px] border-neutral-300 bg-base-100 fixed z-30 top-0 w-full">
         <div class="navbar w-11/12 mx-auto min-h-[78px] flex-col md:flex-row">
             <div class="flex-1">
                 <a class="btn btn-ghost text-2xl">
@@ -38,7 +38,7 @@
                 <div
                     class="w-fit h-fit border-[0.5px] border-neutral-300 rounded-md pl-3 pr-1 flex flex-row items-center">
                     <img src="./assets/search.png" alt="" class="w-4 h-4">
-                    <input type="text" placeholder="Search" class="input border-none w-24 md:w-auto" />
+                    <input type="text" placeholder="Search" class="input border-none w-24 md:w-auto" id="searchInput"/>
                 </div>
                 <div class="dropdown dropdown-end">
                     <ul tabindex="-1"
@@ -54,7 +54,7 @@
                     </ul>
                 </div>
                 <button class="btn btn-primary shadow-none -ml-3 border-2 border-primary"
-                    id="search-issue-btn">Search</button>
+                    id="search-issue-btn" onclick="loadSearchResults()">Search</button>
             </div>
         </div>
     </header>
@@ -96,14 +96,18 @@
 
 
         </section>
+
         <!-- Loading Screen -->
         <section class="p-6 bg-base-200 shadow-md shadow-neutral-200 rounded-b-xl justify-center hidden" id="loadingContainer">
             <span class="loading loading-spinner loading-xl text-neutral-700"></span>
         </section>
     </main>
-
+    
+    <section id="modalContainer">
+        
+    </section>
 
     <script src="./Scripts/main.js"></script>
+    
 </body>
-
 </html>

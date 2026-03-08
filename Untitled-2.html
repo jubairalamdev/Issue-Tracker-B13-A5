@@ -1,0 +1,40 @@
+
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle p-9">
+        <div class="modal-box space-y-5">
+            <h3 class="text-2xl font-bold">Fix broken image uploads</h3>
+            <div class="flex gap-2 items-center">
+                <div class="badge bg-success py-4 mt-1 rounded-full text-neutral-100">Opened</div>
+                <p class="text-neutral-500 text-sm font-semibold">· Opened By Fahim Ahmed · 22/02/2026</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <div class="badge bg-error/20 border-error border-[0.5px] text-sm text-error font-medium rounded-full">
+                    <img src="./assets/bug.png" alt="">
+                    BUG
+                </div>
+                <div
+                    class="badge bg-warning/20 border-warning border-[0.5px] text-sm text-warning font-medium rounded-full">
+                    <img src="./assets/help.png" alt="">
+                    HELP WANTED
+                </div>
+                <p class="mt-5 text-neutral-500 text-lg text-medium leading-7">The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.</p>
+                <div class="bg-base-200 p-6 w-full mt-5 flex">
+                    <div class="flex-1">
+                        <p class="text-neutral-500 text-lg text-medium leading-7">Assignee:</p>
+                        <h3 class="text-neutral-800 font-semibold text-lg">Fahim Ahmed</h3>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-neutral-500 text-lg text-medium leading-7">Priority:</p>
+                        <div class="badge bg-error rounded-full w-18 py-3 text-neutral-100">HIGH</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn btn-primary shadow-none">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>

@@ -9,3 +9,11 @@
 input:focus {
     outline: none;
 }
+
+.bg-success {
+    background-color: #00A96E;
+}
+
+.bg-error {
+    background-color: #EF4444;
+}
